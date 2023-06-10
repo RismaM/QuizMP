@@ -1,0 +1,7 @@
+{
+  "name": "RMApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
