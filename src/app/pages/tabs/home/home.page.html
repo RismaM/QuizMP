@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Masukkan Data</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Masukkan Data</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding">
+    <ion-item>
+      <ion-label position="floating">Nama</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.nama"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">NIK</ion-label>
+      <ion-input type="number" placeholder="Input Data" [(ngModel)]="form.nik"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tempat Lahir</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.tempat_lahir"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tanggal Lahir</ion-label>
+      <ion-input type="date" placeholder="Input Data" [(ngModel)]="form.tanggal_lahir"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Jenis Kelamin</ion-label>
+      <ion-select [(ngModel)]="form.jenis_kelamin">
+        <ion-select-option value="L">Laki-laki</ion-select-option>
+        <ion-select-option value="P">Perempuan</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Alamat</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.alamat"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Agama</ion-label>
+      <ion-select [(ngModel)]="form.agama">
+        <ion-select-option value="Islam">ISLAM</ion-select-option>
+        <ion-select-option value="Kristen">KRISTEN</ion-select-option>
+        <ion-select-option value="Katolik">KATHOLIK</ion-select-option>
+        <ion-select-option value="Hindu">HINDU</ion-select-option>
+        <ion-select-option value="Budha">BUDHA</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Status Perkawinan</ion-label>
+      <ion-select [(ngModel)]="form.status_perkawinan">
+        <ion-select-option value="Belum Kawin">Belum Kawin</ion-select-option>
+        <ion-select-option value="Kawin">Kawin</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Pekerjaan</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.pekerjaan"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Kewarganegaraan</ion-label>
+      <ion-select [(ngModel)]="form.kewarganegaraan">
+        <ion-select-option value="WNI">WNI</ion-select-option>
+        <ion-select-option value="WNA">WNA</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Berlaku Hingga</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="form.berlaku_hingga"></ion-input>
+    </ion-item>
+
+    <br>
+    <ion-label position="floating">Kirim melalui : </ion-label>
+    <br>
+    <br>
+    <ion-row>
+      <ion-col size="3">
+        <ion-button fill="solid" size="large" color="success" (click)="sendToWhatsapp()">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </ion-button>
+      </ion-col>
+    
+      <ion-col size="3">
+        <ion-button fill="solid" size="large" color="primary" (click)="sendToTelegram()">
+          <ion-icon name="navigate"></ion-icon>
+        </ion-button>
+      </ion-col>
+    
+      <ion-col size="3">
+        <ion-button fill="solid" size="large" color="danger" (click)="sendToEmail()">
+          <ion-icon name="mail"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    
+
+  </div>
+
+</ion-content>
